@@ -1,21 +1,24 @@
 {
-  "name": "zapier-platform-example-app-minimal",
+  "name": "zapier-tmdb",
   "version": "1.0.0",
   "description": "An example app for the Zapier platform.",
-  "repository": "zapier/zapier-platform-example-app-minimal",
+  "repository": "xavdid/zapier-tmdb",
   "homepage": "https://zapier.com/",
-  "author": "Bryan Helmig <bryan@zapier.com>",
+  "author": "David Brownman <beamneocube@gmail.com>",
   "license": "BSD-3-Clause",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "zapier build --disable-dependency-detection && zapier upload"
   },
   "engines": {
     "node": "6.10.2",
     "npm": ">=3.10.10"
   },
   "dependencies": {
-    "zapier-platform-core": "4.3.2"
+    "glob": "^7.1.2",
+    "zapier-platform-core": "5.0.0"
   },
   "devDependencies": {
     "jest": "^22.3.0"
@@ -25,6 +28,8 @@
     "singleQuote": true
   },
   "standard": {
-    "env": { "jest": true }
+    "env": {
+      "jest": true
+    }
   }
 }

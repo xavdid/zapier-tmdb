@@ -11,12 +11,10 @@ it('should run search.movie', () => {
     authData: { api_key: process.env.TMDB_API_KEY }
   }
 
-  return appTester(App.searches.movie.operation.perform, bundle).then(
-    results => {
-      const result = results[0]
-      expect(result.id).toBeTruthy()
-      expect(result.release_date).toEqual('2018-02-16') // the US release date, default is the international one
-      expect(result.poster_url).toBeTruthy()
-    }
-  )
+  return appTester(App.creates.movie.operation.perform, bundle).then(result => {
+    expect(result.id).toBeTruthy()
+    expect(result.release_date).toEqual('2018-02-16') // the US release date, default is the international one
+    expect(result.poster_url).toBeTruthy()
+    expect(result.poster_url.slice(8).includes('//')).toBeFalsy()
+  })
 })

@@ -33,15 +33,19 @@ module.exports = {
           const directors = credits.crew.filter(c => c.job === 'Director')
 
           directors.forEach(d => {
-            d.profile_url = `${constants.IMAGE_ROOT}/${d.profile_path}`
+            d.profile_url = `${constants.IMAGE_ROOT}${d.profile_path}`
           })
 
+          // returns an object or a string that becomes an object
           if (bundle.inputData.single) {
-            return directors
+            return directors[0]
           } else {
-            return JSON.stringify(directors)
+            return { jsonStr: JSON.stringify(directors) }
           }
         })
+    },
+    sample: {
+      jsonStr: '[{"id": 1}]'
     }
   }
 }
