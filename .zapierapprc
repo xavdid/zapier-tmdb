@@ -1,4 +1,5 @@
 {
   "id": 2677,
-  "key": "App2677"
+  "key": "App2677",
+  "includeInBuild": ["^src/*"]
 }

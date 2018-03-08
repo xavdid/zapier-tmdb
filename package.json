@@ -9,12 +9,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch",
-    "build": "zapier build --disable-dependency-detection && zapier upload"
-  },
-  "engines": {
-    "node": "6.10.2",
-    "npm": ">=3.10.10"
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "glob": "^7.1.2",
