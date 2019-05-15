@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "glob": "^7.1.2",
-    "zapier-platform-core": "5.0.0"
+    "zapier-platform-core": "8.1.0"
   },
   "devDependencies": {
     "jest": "^22.3.0"
