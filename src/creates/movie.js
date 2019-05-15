@@ -31,14 +31,15 @@ module.exports = {
         })
         .then(response => {
           let movieInfo = response.json
-
           const region = bundle.inputData.region || 'US'
           const regionReleases =
             movieInfo.release_dates.results.find(
               d => d.iso_3166_1 === region
-            ) || []
+            ) || {}
 
-          const release = regionReleases.release_dates.find(r => r.type === 3)
+          const release = Object.keys(regionReleases).length
+            ? regionReleases.release_dates.find(r => r.type === 3)
+            : undefined
 
           if (release) {
             movieInfo.release_date = release.release_date.slice(0, 10)
