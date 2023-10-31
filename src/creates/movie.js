@@ -7,7 +7,6 @@ module.exports = {
   display: {
     label: 'Get Movie Details',
     description: 'Populates Movie Details.',
-    important: true
   },
 
   operation: {
