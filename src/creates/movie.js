@@ -49,7 +49,8 @@ module.exports = {
             id: movieInfo.id,
             title: movieInfo.title,
             poster_url: `${constants.IMAGE_ROOT}${movieInfo.poster_path}`,
-            release_date: movieInfo.release_date
+            release_date: movieInfo.release_date,
+            poster_path: movieInfo.poster_path
           }
         })
     },

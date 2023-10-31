@@ -18,6 +18,9 @@ describe('search', () => {
         expect(result.release_date).toEqual('2018-02-16') // the US release date, default is the international one
         expect(result.poster_url).toBeTruthy()
         expect(result.poster_url.slice(8).includes('//')).toBeFalsy()
+        expect(result.poster_path).toBeTruthy()
+        expect(result.poster_path.startsWith('/')).toBeTruthy()
+        expect(result.poster_path.endsWith('.jpg')).toBeTruthy()
       }
     )
   })
